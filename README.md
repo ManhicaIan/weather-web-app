@@ -86,3 +86,7 @@ npm run preview
 ## License
 
 This project is licensed under the MIT License.
+
+## Project URL
+
+[Roadmapsh project](https://roadmap.sh/projects/weather-app).
