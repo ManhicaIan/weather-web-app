@@ -1,21 +1,21 @@
 import { createContext, useContext, useState } from "react";
 
 interface WeatherContextType {
-  city: string;
-  setcity: (city: string) => void;
-  currentCity: string;
-  setCurrentCity: (city: string) => void;
+  country: string;
+  setCountry: (country: string) => void;
+  currentCountry: string;
+  setCurrentCountry: (country: string) => void;
 }
 
 const WeatherContext = createContext<WeatherContextType | null>(null);
 
 export function WeatherProvider({ children }: { children: React.ReactNode }) {
-  const [city, setcity] = useState<string>("Maputo");
-  const [currentCity, setCurrentCity] = useState<string>(city);
+  const [country, setCountry] = useState<string>("Maputo");
+  const [currentCountry, setCurrentCountry] = useState<string>(country);
 
   return (
     <WeatherContext.Provider
-      value={{ city, setcity, currentCity, setCurrentCity }}
+      value={{ country, setCountry, currentCountry, setCurrentCountry }}
     >
       {children}
     </WeatherContext.Provider>
