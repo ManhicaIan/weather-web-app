@@ -1,12 +1,12 @@
 import { useWeatherContext } from "@/context/WeatherContext";
 
 const SearchBar = () => {
-  const { setCurrentCountry } = useWeatherContext();
+  const { setCurrentCity } = useWeatherContext();
 
   const handleSearch = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    setCurrentCountry(formData.get("search") as string);
+    setCurrentCity(formData.get("search") as string);
   };
   return (
     <section>
